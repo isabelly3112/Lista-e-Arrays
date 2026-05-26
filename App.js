@@ -72,8 +72,14 @@ export default function App() {
     })
   }
 
-  function excluirTarefa(id) {
-    //Criar uma nova lista de tarefas atualizada, onde a tarefa com o id 
+  function excluirTarefa(id){
+    //Criar uma nova lista de tarefas atualizada,
+    //onde a tarefa com o id correspondente é removida
+    const listaAtualizada = tarefas.filter(
+      item => item.id !== id
+    )
+    //Atualizar a nova lista de tarefas
+    setTarefas(listaAtualizada)
   }
 
   // Renderizar a interface do aplicativo 
